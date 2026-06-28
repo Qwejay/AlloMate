@@ -24,12 +24,27 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
 from PySide6.QtCore import Qt, Signal, QThread
 from PySide6.QtGui import QFont, QColor, QBrush, QIcon
 
+__app_name__ = "AlloMate"
+__version__ = "1.0.0"
+__author__ = "QwejayHuang"
+__company__ = "AlloMate"
+__description__ = "智能随机分配与分组管理助手"
+
 os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 def get_resource_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
-        return os.path.join(sys._MEIPASS, relative_path)
+        internal_path = os.path.join(sys._MEIPASS, relative_path)
+        if os.path.exists(internal_path):
+            return internal_path
+            
+    if getattr(sys, 'frozen', False):
+        exe_dir = os.path.dirname(sys.executable)
+        external_path = os.path.join(exe_dir, relative_path)
+        if os.path.exists(external_path):
+            return external_path
+            
     return os.path.join(os.path.abspath("."), relative_path)
 
 def get_app_data_dir():
@@ -1145,7 +1160,7 @@ class GroupsPage(QWidget):
 class Application(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.title_text = "AlloMate - 随机分配助手"
+        self.title_text = f"AlloMate v{__version__} - 随机分配助手"
         self.setWindowTitle(self.title_text)
         self._status_timer = None
 
@@ -1192,7 +1207,7 @@ class Application(QMainWindow):
         sidebar_layout.setContentsMargins(0, 0, 0, 0)
         sidebar_layout.setSpacing(5)
 
-        lbl_logo = QLabel("🤖 随机分配助手")
+        lbl_logo = QLabel(f"🤖 随机分配助手 v{__version__}")
         lbl_logo.setStyleSheet("color: white; font-size: 16px; font-weight: bold; padding: 40px 25px;")
         lbl_logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         sidebar_layout.addWidget(lbl_logo)
@@ -1241,6 +1256,12 @@ class Application(QMainWindow):
         self.statusBar.setStyleSheet(f"color: {COLORS['text_dim']}; padding: 6px 30px;")
         self.status_lbl = QLabel("就绪")
         self.statusBar.addWidget(self.status_lbl)
+        
+        # 将版权信息加入状态栏右侧
+        lbl_copyright = QLabel("Copyright © 2026 QwejayHuang. All rights reserved.")
+        lbl_copyright.setStyleSheet(f"color: {COLORS['text_dim']}; font-size: 10px;")
+        self.statusBar.addPermanentWidget(lbl_copyright)
+        
         container_layout.addWidget(self.statusBar)
 
         main_layout.addWidget(self.main_container)
