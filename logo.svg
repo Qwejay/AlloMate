@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </radialGradient>
+    <linearGradient id="trackBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="trackGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="trackPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- 预先按比例缩放好的 8 种高精度微星模板 -->
+    <path id="star_03" d="M 0,-2.4 Q 0,0 2.4,0 Q 0,0 0,2.4 Q 0,0 -2.4,0 Q 0,0 0,-2.4 Z" />
+    <path id="star_04" d="M 0,-3.2 Q 0,0 3.2,0 Q 0,0 0,3.2 Q 0,0 -3.2,0 Q 0,0 0,-3.2 Z" />
+    <path id="star_05" d="M 0,-4.0 Q 0,0 4.0,0 Q 0,0 0,4.0 Q 0,0 -4.0,0 Q 0,0 0,-4.0 Z" />
+    <path id="star_06" d="M 0,-4.8 Q 0,0 4.8,0 Q 0,0 0,4.8 Q 0,0 -4.8,0 Q 0,0 0,-4.8 Z" />
+    <path id="star_07" d="M 0,-5.6 Q 0,0 5.6,0 Q 0,0 0,5.6 Q 0,0 -5.6,0 Q 0,0 0,-5.6 Z" />
+    <path id="star_08" d="M 0,-6.4 Q 0,0 6.4,0 Q 0,0 0,6.4 Q 0,0 -6.4,0 Q 0,0 0,-6.4 Z" />
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <g transform="translate(256, 256) scale(1.42)" filter="url(#glow)">
+    <g transform="rotate(0)">
+      <rect x="-120" y="-27" width="240" height="54" rx="27" fill="none" stroke="url(#trackBlue)" stroke-width="12" opacity="0.95" />
+    </g>
+    <g transform="rotate(120)">
+      <rect x="-120" y="-27" width="240" height="54" rx="27" fill="none" stroke="url(#trackGreen)" stroke-width="12" opacity="0.95" />
+    </g>
+    <g transform="rotate(240)">
+      <rect x="-120" y="-27" width="240" height="54" rx="27" fill="none" stroke="url(#trackPurple)" stroke-width="12" opacity="0.95" />
+    </g>
+  </g>
+
+  <!-- 采用极其规整、无变换属性的原生定位，保证 100% 解析成功 -->
+  <g filter="url(#glow)">
+    <use href="#star_05" x="75" y="445" fill="#FFFFFF" opacity="0.7" />
+    <use href="#star_03" x="100" y="465" fill="#38BDF8" opacity="0.5" />
+    <use href="#star_04" x="437" y="445" fill="#A5B4FC" opacity="0.65" />
+    <use href="#star_04" x="412" y="465" fill="#FFFFFF" opacity="0.8" />
+    <use href="#star_03" x="256" y="475" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_05" x="75" y="67" fill="#FFFFFF" opacity="0.7" />
+    <use href="#star_03" x="100" y="47" fill="#34D399" opacity="0.5" />
+    <use href="#star_04" x="437" y="67" fill="#38BDF8" opacity="0.65" />
+    <use href="#star_04" x="412" y="47" fill="#FFFFFF" opacity="0.8" />
+    <use href="#star_03" x="256" y="37" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_05" x="200" y="200" fill="#FFFFFF" opacity="0.95" />
+    <use href="#star_04" x="215" y="230" fill="#A5B4FC" opacity="0.8" />
+    <use href="#star_04" x="305" y="185" fill="#34D399" opacity="0.8" />
+    <use href="#star_05" x="315" y="215" fill="#38BDF8" opacity="0.9" />
+    <use href="#star_04" x="190" y="280" fill="#34D399" opacity="0.75" />
+    <use href="#star_06" x="295" y="290" fill="#38BDF8" opacity="0.95" />
+    <use href="#star_04" x="230" y="310" fill="#FFFFFF" opacity="0.85" />
+    <use href="#star_05" x="280" y="320" fill="#A5B4FC" opacity="0.9" />
+    <use href="#star_03" x="290" y="70" fill="#A5B4FC" opacity="0.5" />
+    <use href="#star_05" x="210" y="60" fill="#38BDF8" opacity="0.7" />
+    <use href="#star_06" x="340" y="80" fill="#FFFFFF" opacity="0.75" />
+    <use href="#star_04" x="160" y="90" fill="#34D399" opacity="0.65" />
+    <use href="#star_08" x="380" y="110" fill="#FFFFFF" opacity="1.0" />
+    <use href="#star_05" x="420" y="150" fill="#38BDF8" opacity="0.8" />
+    <use href="#star_03" x="450" y="110" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_06" x="360" y="160" fill="#A5B4FC" opacity="0.75" />
+    <use href="#star_04" x="410" y="80" fill="#34D399" opacity="0.6" />
+    <use href="#star_05" x="440" y="220" fill="#FFFFFF" opacity="0.7" />
+    <use href="#star_03" x="470" y="260" fill="#38BDF8" opacity="0.5" />
+    <use href="#star_07" x="420" y="270" fill="#A5B4FC" opacity="0.8" />
+    <use href="#star_04" x="370" y="220" fill="#34D399" opacity="0.6" />
+    <use href="#star_08" x="400" y="370" fill="#A5B4FC" opacity="0.9" />
+    <use href="#star_04" x="440" y="410" fill="#FFFFFF" opacity="0.7" />
+    <use href="#star_06" x="350" y="420" fill="#38BDF8" opacity="0.75" />
+    <use href="#star_05" x="370" y="320" fill="#34D399" opacity="0.8" />
+    <use href="#star_03" x="450" y="340" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_06" x="220" y="430" fill="#38BDF8" opacity="0.7" />
+    <use href="#star_03" x="280" y="440" fill="#34D399" opacity="0.5" />
+    <use href="#star_05" x="160" y="420" fill="#A5B4FC" opacity="0.7" />
+    <use href="#star_08" x="120" y="360" fill="#38BDF8" opacity="0.9" />
+    <use href="#star_03" x="80" y="410" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_05" x="70" y="330" fill="#34D399" opacity="0.7" />
+    <use href="#star_06" x="140" y="310" fill="#A5B4FC" opacity="0.8" />
+    <use href="#star_04" x="60" y="240" fill="#34D399" opacity="0.65" />
+    <use href="#star_07" x="90" y="190" fill="#38BDF8" opacity="0.8" />
+    <use href="#star_03" x="50" y="270" fill="#FFFFFF" opacity="0.5" />
+    <use href="#star_05" x="110" y="260" fill="#A5B4FC" opacity="0.7" />
+    <use href="#star_08" x="120" y="120" fill="#34D399" opacity="0.85" />
+    <use href="#star_04" x="70" y="150" fill="#FFFFFF" opacity="0.7" />
+    <use href="#star_05" x="140" y="160" fill="#38BDF8" opacity="0.75" />
+    <use href="#star_03" x="180" y="130" fill="#A5B4FC" opacity="0.5" />
+  </g>
+</svg>
